@@ -15,9 +15,11 @@ opentelemetry-api==1.45.1
 packaging==26.3
 pluggy==1.6.0
 pydantic==2.13.5
+pydantic-settings==2.15.0
 pydantic_core==2.46.5
 Pygments==2.21.0
 pytest==9.1.1
+python-dotenv==1.2.4
 ruff==0.16.10
 starlette==1.7.0
 truststore==0.10.4
