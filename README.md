@@ -14,7 +14,8 @@ A modular trading system for detecting and evaluating arbitrage opportunities in
 
 Current development phase:
 
-**Iteration 0 — Foundation**
+**Iteration 1 — Market Data**
+
 
 ## Project Structure 
 
