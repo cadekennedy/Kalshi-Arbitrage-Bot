@@ -51,9 +51,7 @@ class KalshiAuth:
             )
 
         except (ValueError, TypeError) as exc:
-            raise KalshiAuthenticationError(
-                "Unable to load Kalshi private key."
-            ) from exc
+            raise KalshiAuthenticationError("Unable to load Kalshi private key.") from exc
 
     @staticmethod
     def _normalize_path(path: str) -> str:
@@ -77,9 +75,7 @@ class KalshiAuth:
     ) -> str:
         normalized_path = self._normalize_path(path)
 
-        message = (
-            f"{timestamp_ms}{method.upper()}{normalized_path}"
-        ).encode("utf-8")
+        message = (f"{timestamp_ms}{method.upper()}{normalized_path}").encode("utf-8")
 
         if isinstance(self.private_key, ed25519.Ed25519PrivateKey):
             signature = self.private_key.sign(message)
@@ -95,9 +91,7 @@ class KalshiAuth:
             )
 
         else:
-            raise KalshiAuthenticationError(
-                "Unsupported Kalshi private key type."
-            )
+            raise KalshiAuthenticationError("Unsupported Kalshi private key type.")
 
         return base64.b64encode(signature).decode("utf-8")
 
